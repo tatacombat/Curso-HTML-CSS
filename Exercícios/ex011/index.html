@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="foto-p.png" type="image/png"> <!-- se a TELA for MENOR que 750, ele vai carregar essa imagem P, imagem menor sempre primeiro-->
+        <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png"> <!-- se a TELA for MENOR que 1050, ele vai carregar essa imagem M-->
+        <img src="foto-g.png" alt="A imagem flexível funciona"> <!-- FOTO G é a PADRÃO, colocamos ela primeiro-->
+    </picture>
+    
+    <h1>Reproduzindo Áudio</h1>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="happy-mistake.mp3" type="audio/mpeg">
+        <!-- dependendo do navegador o autoplay funciona só com alguns tipos de arquivos, ele tenta carregar o primeiro arquivo, só depois os outros -->
+        <source src="happy-mistake.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta o arquivo de audio. </p>
+    </audio>
+
+    <h1>Inserindo video hospedado localmente. Com consumo de banda na nossa hospedagem.</h1>
+    <video width="300" controls> <!-- a ordem dos arquivos que vão ser forçados primeiro, sempre de cima para baixo-->
+        <source src="midia/video1.m4v" type="video/mp4" >
+        <source src="midia/video1.m4v" type="video/mp4">
+        <source src="midia/video1.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com a reprodução de videos.</p>
+    </video>
+    <p>Video hospedado externamente. Sem consumo de banda na nossa hospedagem.</p>
+    <iframe width="420" height="300" src="https://www.youtube.com/embed/Bp6zq1Aws6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

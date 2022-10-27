@@ -1,0 +1,23 @@
+@charset "UTF-8"; /* REGRA q indica compatibilidade com o padrão para não ocorrer problemas com acentuação*/
+
+/*style EXTERNAL*/
+body {
+    background-color: lightgoldenrodyellow;
+    color: chocolate;
+    font-size: 12pt;
+    font-family: Arial;
+    text-align: justify;
+}
+
+h1 {
+    color: rgb(30, 58, 236);
+}
+
+h2 {
+    color: darkred;
+}
+
+p {
+    color:black ;
+    text-decoration: none;
+}
